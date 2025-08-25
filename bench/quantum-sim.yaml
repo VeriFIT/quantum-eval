@@ -1,0 +1,11 @@
+medusa-sylvan-base:
+  cmd: ../bin/medusa-sylvan-wrap.sh $1
+
+medusa-sylvan-loop:
+  cmd: ../bin/medusa-sylvan-wrap.sh -s $1
+
+medusa-motobuddy-base:
+  cmd: ../bin/medusa-motobuddy-wrap.sh $1
+
+medusa-motobuddy-loop:
+  cmd: ../bin/medusa-motobuddy-wrap.sh -s $1
