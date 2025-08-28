@@ -1,0 +1,10 @@
+name;num_qubits
+../circuits/no-measure/MOGrover/04.qasm;12
+../circuits/no-measure/MOGrover/06.qasm;18
+../circuits/no-measure/MOGrover/03.qasm;9
+../circuits/no-measure/MOGrover/07.qasm;21
+../circuits/no-measure/MOGrover/09.qasm;27
+../circuits/no-measure/MOGrover/08.qasm;24
+../circuits/no-measure/MOGrover/10.qasm;30
+../circuits/no-measure/MOGrover/05.qasm;15
+../circuits/no-measure/MOGrover/11.qasm;33

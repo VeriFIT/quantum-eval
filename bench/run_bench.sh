@@ -55,7 +55,7 @@ shift $((OPTIND - 1))
 
 benchmarks=()
 
-# If no benchmark is given, run the three omega automata complementation sets
+# If no benchmark is given, run the two sets
 if [ -z "$1" ]; then
   benchmarks=("no-measure_BernsteinVazirani" "no-measure_Feynman")
 else
