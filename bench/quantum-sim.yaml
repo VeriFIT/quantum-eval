@@ -9,3 +9,6 @@ medusa-motobuddy-base:
 
 medusa-motobuddy-loop:
   cmd: ../bin/medusa-motobuddy-wrap.sh -s $1
+
+sliqsim:
+  cmd: ../bin/sliqsim-wrap.sh $1
