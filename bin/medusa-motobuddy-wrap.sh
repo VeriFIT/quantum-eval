@@ -14,6 +14,15 @@ fi
 
 QASM_FILE="$1"
 
+# skip NL file
+QASM_BASE=$(basename "$QASM_FILE")
+
+if [[ "$QASM_BASE" == NL_* ]]; then
+    echo "###runtime:NA"
+    echo "###memory:NA"
+    exit 1
+fi
+
 MEDUSA_SYLVAN_EXE="${SCRIPT_DIR}/MEDUSA_buddy_gmp" # TODO Change executable
 
 # Run medusa with loop option if requested
