@@ -12,3 +12,6 @@ medusa-motobuddy-loop:
 
 sliqsim:
   cmd: ../bin/sliqsim-wrap.sh $1
+
+ddsim:
+  cmd: ../bin/ddsim-wrap.sh $1
