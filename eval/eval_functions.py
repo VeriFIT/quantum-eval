@@ -36,7 +36,14 @@ def load_benches(benches, tools, timeout=120):
         input_data = ""
         for tool in tools:
             assert tool != ""
-            input_data += read_latest_result_file(bench, tool, timeout)
+            raw_data = read_latest_result_file(bench, tool, timeout)
+
+            # Skip lines that reference NL_ files
+            filtered_lines = []
+            for line in raw_data.splitlines():
+                if "NL_" not in line:
+                    filtered_lines.append(line)
+            input_data += "\n".join(filtered_lines) + "\n"
 
         # Capture CSV output from pyco_proc.proc_res
         buf = io.StringIO()
