@@ -531,7 +531,8 @@ def parse_classifications_for_benchmarks(benchmark_names):
     return combined_df
 
 def plot_tool_vs_qubits(df, tools, benchmark, property="runtime", width=8, height=6, log_y=True,
-                        show_legend=True, file_name_to_save=None, transparent=False):
+                        show_legend=True, file_name_to_save=None, transparent=False,
+                        timeout=120):
     """
     Plot runtime or memory vs number of qubits for multiple tools for a single benchmark.
 
@@ -568,6 +569,14 @@ def plot_tool_vs_qubits(df, tools, benchmark, property="runtime", width=8, heigh
 
     # Convert runtime/memory to numeric
     plot_df[property] = pd.to_numeric(plot_df[property], errors="coerce")
+
+    # do not plot 0kB -> error
+    if property=="memory":
+        plot_df = plot_df[(plot_df[property] != 0) & (plot_df[property].notna())]
+    # do not plot timeout
+    if property=="runtime":
+        plot_df = plot_df[(plot_df[property] != timeout)]
+
 
     # ggplot line plot
     p = (
