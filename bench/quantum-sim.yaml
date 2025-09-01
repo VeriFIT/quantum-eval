@@ -15,3 +15,15 @@ sliqsim:
 
 ddsim:
   cmd: ../bin/ddsim-wrap.sh $1
+
+quasimodo-CFLOBDD:
+  cmd: ../bin/quasimodo-wrap.sh -t CFLOBDD $1
+
+quasimodo-WCFLOBDD:
+  cmd: ../bin/quasimodo-wrap.sh -t WCFLOBDD $1
+
+quasimodo-BDD:
+  cmd: ../bin/quasimodo-wrap.sh -t BDD $1
+
+quasimodo-WBDD:
+  cmd: ../bin/quasimodo-wrap.sh -t WBDD $1

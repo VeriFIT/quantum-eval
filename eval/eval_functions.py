@@ -63,7 +63,7 @@ def load_benches(benches, tools, timeout=120):
             for metric in ["runtime", "memory"]:
                 col = f"{tool}-{metric}"
                 if col not in df.columns:
-                    df[col] = float(timeout) if metric == "runtime" else 0
+                    df[col] = float('inf') if metric == "runtime" else 0
 
         df["benchmark"] = bench
         dfs[bench] = df
@@ -75,7 +75,7 @@ def load_benches(benches, tools, timeout=120):
     for tool in tools:
         for metric in ["runtime", "memory"]:
             col = f"{tool}-{metric}"
-            df_all[col] = pd.to_numeric(df_all[col], errors='coerce').fillna(timeout if metric == "runtime" else 0).astype(float)
+            df_all[col] = pd.to_numeric(df_all[col], errors='coerce').fillna(float('inf') if metric == "runtime" else 0).astype(float)
 
     return df_all
 
@@ -569,21 +569,24 @@ def plot_tool_vs_qubits(df, tools, benchmark, property="runtime", width=8, heigh
 
     # Convert runtime/memory to numeric
     plot_df[property] = pd.to_numeric(plot_df[property], errors="coerce")
+    property_name=property.capitalize()
 
     # do not plot 0kB -> error
     if property=="memory":
         plot_df = plot_df[(plot_df[property] != 0) & (plot_df[property].notna())]
+        property_name+=" (kB)"
     # do not plot timeout
     if property=="runtime":
-        plot_df = plot_df[(plot_df[property] != timeout)]
+        plot_df = plot_df[(plot_df[property] != float('inf'))]
+        property_name+=" (s)"
 
-
+    
     # ggplot line plot
     p = (
         p9.ggplot(plot_df, p9.aes(x="num_qubits", y=property, color="tool"))
         + p9.geom_line(size=1.5)
         + p9.geom_point(size=2)
-        + p9.labs(x="Number of Qubits", y=property.capitalize(), title=f"{benchmark} ({property})")
+        + p9.labs(x="Number of Qubits", y=property_name, title=f"{benchmark} ({property})")
         + p9.theme_bw()
         + p9.theme(
             figure_size=(width, height),
