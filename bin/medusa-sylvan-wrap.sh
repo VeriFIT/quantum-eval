@@ -23,7 +23,7 @@ if [[ "$QASM_BASE" == NL_* ]]; then
 fi
 
 
-MEDUSA_SYLVAN_EXE="${SCRIPT_DIR}/MEDUSA_orig" # TODO Change executable
+MEDUSA_SYLVAN_EXE="${SCRIPT_DIR}/../simulators/medusa-sylvan/MEDUSA" # TODO Change executable
 
 # Run medusa with loop option if requested
 if [[ $LOOP_MODE -eq 1 ]]; then
