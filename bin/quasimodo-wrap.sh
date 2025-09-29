@@ -31,7 +31,7 @@ if [ -f "$QASM_NL_FILE" ]; then
     QASM_FILE="$QASM_NL_FILE"
 fi
 
-QUASIMODO_EXE="${SCRIPT_DIR}/QuasimodoSim" # TODO Change executable
+QUASIMODO_EXE="${SCRIPT_DIR}/../simulators/quasimodo/QuasimodoSim"
 QUASIMODO_OUT=$("$QUASIMODO_EXE" -t "$QUASIMODO_BACKEND" -i -f "$QASM_FILE" 2>&1)
 
 EXIT_CODE=$?
