@@ -30,9 +30,8 @@ QASM_NL_FILE="$QASM_DIR/NL_${QASM_BASE}"
 if [ -f "$QASM_NL_FILE" ]; then
     QASM_FILE="$QASM_NL_FILE"
 fi
-
-QUASIMODO_EXE="${SCRIPT_DIR}/../simulators/quasimodo/QuasimodoSim"
-QUASIMODO_OUT=$("$QUASIMODO_EXE" -t "$QUASIMODO_BACKEND" -i -f "$QASM_FILE" 2>&1)
+QUASIMODO_EXE="LD_LIBRARY_PATH=${SCRIPT_DIR}/../simulators/quasimodo/Quasimodo:$LD_LIBRARY_PATH ${SCRIPT_DIR}/../simulators/quasimodo/QuasimodoSim"
+QUASIMODO_OUT=$(eval "$QUASIMODO_EXE -t $QUASIMODO_BACKEND -i -f $QASM_FILE 2>&1")
 
 EXIT_CODE=$?
 
