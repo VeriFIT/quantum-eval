@@ -27,3 +27,11 @@ quasimodo-BDD:
 
 quasimodo-WBDD:
   cmd: ../bin/quasimodo-wrap.sh -t WBDD $1
+
+# two input file simulators
+
+autoq:
+  cmd: ../bin/autoq-wrap.sh $1 $2
+
+dirac-ddsim:
+  cmd: ../bin/dirac-ddsim-wrap.sh $1 $2
