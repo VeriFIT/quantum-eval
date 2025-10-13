@@ -7,7 +7,7 @@ source "$BASE_DIR/common.sh"
 
 if [[ $# -lt 1 ]]; then
     echo "Usage: $0 <simulator-name> [--all]"
-    echo "Available: medusa-sylvan, medusa-motobuddy, sliqsim, ddsim, quasimodo"
+    echo "Available: medusa-sylvan, medusa-motobuddy, sliqsim, ddsim, quasimodo, quokka"
     exit 1
 fi
 
@@ -24,7 +24,7 @@ uninstall_simulator() {
 }
 
 if [[ "$1" == "--all" ]]; then
-    for sim in medusa-sylvan medusa-motobuddy sliqsim ddsim quasimodo; do
+    for sim in medusa-sylvan medusa-motobuddy sliqsim ddsim quasimodo autoq dirac-ddsim quokka; do
         uninstall_simulator "$sim"
     done
 else
