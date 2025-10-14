@@ -1,0 +1,4 @@
+Constants
+c1 := 1
+Extended Dirac
+{c1 |s000000000000000000> : |s|=22}
