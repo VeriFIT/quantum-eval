@@ -31,6 +31,12 @@ quasimodo-WBDD:
 quokka:
   cmd: ../bin/quokka-wrap.sh $1
 
+qsylvan-evdd:
+  cmd: ../bin/qsylvan-wrap.sh -t qmdd $1 # evdd
+
+qsylvan-mtbdd:
+  cmd: ../bin/qsylvan-wrap.sh -t mtbdd $1
+
 # two input file simulators
 
 autoq:
