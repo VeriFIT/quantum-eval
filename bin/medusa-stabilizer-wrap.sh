@@ -3,15 +3,6 @@
 ABSOLUTE_SCRIPT_PATH=$(readlink -f "$0")
 SCRIPT_DIR=$(dirname "${ABSOLUTE_SCRIPT_PATH}")
 
-# Default mode
-LOOP_MODE=0
-
-# Check for -s flag
-if [[ "$1" == "-s" ]]; then
-    LOOP_MODE=1
-    shift  # remove the -s from arguments
-fi
-
 QASM_FILE="$1"
 # skip NL file
 QASM_BASE=$(basename "$QASM_FILE")
@@ -25,12 +16,7 @@ fi
 
 MEDUSA_SYLVAN_EXE="${SCRIPT_DIR}/../simulators/medusa-stabilizer/stabilizer"
 
-# Run medusa with loop option if requested
-if [[ $LOOP_MODE -eq 1 ]]; then
-    MEDUSA_OUT=$("$MEDUSA_SYLVAN_EXE" -i -s --file "$QASM_FILE" 2>&1)
-else
-    MEDUSA_OUT=$("$MEDUSA_SYLVAN_EXE" -i --file "$QASM_FILE" 2>&1)
-fi
+MEDUSA_OUT=$("$MEDUSA_SYLVAN_EXE" -i --file "$QASM_FILE" 2>&1)
 
 EXIT_CODE=$?
 
