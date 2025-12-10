@@ -10,6 +10,12 @@ medusa-motobuddy-base:
 medusa-motobuddy-loop:
   cmd: ../bin/medusa-motobuddy-wrap.sh -s $1
 
+medusa-stabilizer-base:
+  cmd: ../bin/medusa-stabilizer-wrap.sh $1
+
+medusa-stabilizer-loop:
+  cmd: ../bin/medusa-stabilizer-wrap.sh -s $1
+
 sliqsim:
   cmd: ../bin/sliqsim-wrap.sh $1
 
