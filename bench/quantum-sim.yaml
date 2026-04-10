@@ -10,8 +10,35 @@ medusa-motobuddy-base:
 medusa-motobuddy-loop:
   cmd: ../bin/medusa-motobuddy-wrap.sh -s $1
 
+medusa-motobuddy-f32-base:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -p f32 $1
+
+medusa-motobuddy-f64-base:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -p f64 $1
+
+medusa-motobuddy-f80-base:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -p f80 $1
+
+medusa-motobuddy-f128-base:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -p f128 $1
+
+medusa-motobuddy-f32-loop:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -s -p f32 $1
+
+medusa-motobuddy-f64-loop:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -s -p f64 $1
+
+medusa-motobuddy-f80-loop:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -s -p f80 $1
+
+medusa-motobuddy-f128-loop:
+  cmd: ../bin/medusa-motobuddy-fp-wrap.sh -s -p f128 $1
+
 medusa-stabilizer-base:
   cmd: ../bin/medusa-stabilizer-wrap.sh $1
+
+medusa-stabilizer-loop:
+  cmd: ../bin/medusa-stabilizer-wrap.sh -s $1
 
 sliqsim:
   cmd: ../bin/sliqsim-wrap.sh $1
