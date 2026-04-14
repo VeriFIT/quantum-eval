@@ -24,6 +24,12 @@ if [[ -f "$QASM_NL_FILE" ]]; then
     QASM_FILE="$QASM_NL_FILE"
 fi
 
+QUASM_QUOKKA_FILE="$QASM_DIR/../quokka-edited/${QASM_BASE}"
+if [[ -f "$QUASM_QUOKKA_FILE" ]]; then
+    echo "# Using QUOKKA variant: $QUASM_QUOKKA_FILE" >&2
+    QASM_FILE="$QUASM_QUOKKA_FILE"
+fi
+
 QASM_FILE_ABS=$(realpath "$QASM_FILE") || {
     echo "###runtime:NA"
     echo "###memory:NA"
