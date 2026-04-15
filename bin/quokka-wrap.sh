@@ -4,8 +4,10 @@ set -euo pipefail
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
 QASM_FILE="${1:-}"
+USE_CB="${2:-}"   # second argument: if non-empty, use computational basis
+
 if [[ -z "$QASM_FILE" ]]; then
-    echo "Usage: $0 <qasm-file>" >&2
+    echo "Usage: $0 <qasm-file> [cb]" >&2
     exit 1
 fi
 
@@ -41,12 +43,18 @@ CONFIG_FILE_ABS=$(realpath "$QUOKKA_DIR/config.json")
 
 cd "$QUOKKA_DIR" || { echo "Error: cannot enter $QUOKKA_DIR" >&2; exit 1; }
 
+# build python args based on flag
+PY_ARGS=()
+if [[ -n "$USE_CB" ]]; then
+    # second arg present -- use computational basis
+    PY_ARGS+=(--computational_basis)
+fi
+PY_ARGS+=("$QASM_FILE_ABS")
+
 set +e
-SIM_OUTPUT=$(env QUOKKA_CONFIG="$CONFIG_FILE_ABS" python3 quokka-sim.py "$QASM_FILE_ABS" 2>&1)
+SIM_OUTPUT=$(env QUOKKA_CONFIG="$CONFIG_FILE_ABS" python3 quokka-sim.py "${PY_ARGS[@]}" 2>&1)
 EXIT_CODE=$?
 set -e
-
-echo "$SIM_OUTPUT"
 
 RUNTIME=$(echo "$SIM_OUTPUT" | grep -oP 'Time:\s*\K[0-9.]+' || true)
 MEMORY=$(echo "$SIM_OUTPUT"  | grep -oP 'Peak memory usage:\s*\K[0-9.]+' || true)

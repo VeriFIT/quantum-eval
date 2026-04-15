@@ -61,6 +61,9 @@ quasimodo-WBDD:
 quokka:
   cmd: ../bin/quokka-wrap.sh $1
 
+quokka-CB:
+  cmd: ../bin/quokka-wrap.sh -cb $1 # computational basis true
+
 qsylvan-evdd:
   cmd: ../bin/qsylvan-wrap.sh -t qmdd $1 # evdd
 
