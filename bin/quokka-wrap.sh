@@ -11,8 +11,19 @@ if [[ -z "$QASM_FILE" ]]; then
     exit 1
 fi
 
+# Normalize input path
+QASM_FILE=$(realpath "$QASM_FILE") || {
+    echo "###runtime:NA"
+    echo "###memory:NA"
+    exit 1
+}
+
 QASM_DIR=$(dirname "$QASM_FILE")
 QASM_BASE=$(basename "$QASM_FILE")
+
+CIRCUITS_ROOT=$(realpath "$SCRIPT_DIR/../circuits/no-measure")
+
+QASM_REL="${QASM_FILE#"$CIRCUITS_ROOT/"}"
 
 if [[ "$QASM_BASE" == NL_* ]]; then
     echo "###runtime:NA"
@@ -22,18 +33,23 @@ fi
 
 QASM_NL_FILE="$QASM_DIR/NL_${QASM_BASE}"
 if [[ -f "$QASM_NL_FILE" ]]; then
-    echo "# Using NL variant: $QASM_NL_FILE" >&2
     QASM_FILE="$QASM_NL_FILE"
 fi
 
-QUASM_QUOKKA_FILE="$QASM_DIR/../quokka-edited/${QASM_BASE}"
+# Quokka-edited variant: preserve subdirectory structure
+# ../circuits/no-measure/quokka-edited/ModifiedRevLib/ab.qasm
+QUOKKA_EDITED_DIR="$CIRCUITS_ROOT/quokka-edited"
+QUASM_QUOKKA_FILE="$QUOKKA_EDITED_DIR/$QASM_REL"
 if [[ -f "$QUASM_QUOKKA_FILE" ]]; then
     QASM_FILE="$QUASM_QUOKKA_FILE"
 fi
 
-QUASM_QUOKKA_FILE="$QASM_DIR/../no-mcx/${QASM_BASE}"
-if [[ -f "$QUASM_QUOKKA_FILE" ]]; then
-    QASM_FILE="$QUASM_QUOKKA_FILE"
+# Quokka-edited variant: preserve subdirectory structure
+# ../circuits/no-measure/no-mcx/ModifiedRevLib/ab.qasm
+NOMCX_EDITED_DIR="$CIRCUITS_ROOT/no-mcx"
+QUASM_NOMCX_FILE="$NOMCX_EDITED_DIR/$QASM_REL"
+if [[ -f "$QUASM_NOMCX_FILE" ]]; then
+    QASM_FILE="$QUASM_NOMCX_FILE"
 fi
 
 QASM_FILE_ABS=$(realpath "$QASM_FILE") || {
@@ -41,16 +57,13 @@ QASM_FILE_ABS=$(realpath "$QASM_FILE") || {
     echo "###memory:NA"
     exit 1
 }
-
 QUOKKA_DIR="$SCRIPT_DIR/../simulators/quokka"
 CONFIG_FILE_ABS=$(realpath "$QUOKKA_DIR/config.json")
 
 cd "$QUOKKA_DIR" || { echo "Error: cannot enter $QUOKKA_DIR" >&2; exit 1; }
 
-# build python args based on flag
 PY_ARGS=()
 if [[ -n "$USE_CB" ]]; then
-    # second arg present -- use computational basis
     PY_ARGS+=(--computational_basis)
 fi
 PY_ARGS+=("$QASM_FILE_ABS")
