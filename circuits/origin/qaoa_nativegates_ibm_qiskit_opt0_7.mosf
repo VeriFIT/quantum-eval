@@ -1,0 +1,1823 @@
+{
+    "version": "1.0",
+    "tree_id": "tree_id",
+    "vars": {
+        "q[0]": 0,
+        "q[1]": 1,
+        "q[2]": 2,
+        "q[3]": 3,
+        "q[4]": 4,
+        "q[5]": 5,
+        "q[6]": 6
+    },
+    "x_levels": 7,
+    "defs": {},
+    "ops": [
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[2]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[2]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[3]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[3]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[2]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[2]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[4]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[2]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[4]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[5]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[5]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[3]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[3]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 1.4888959226665153
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[5]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[5]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -5.494398031622545
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[3]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7887672753432607
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[6]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[5]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 4.7942789016553835
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[6]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 7.853981633974483
+            }
+        }
+    ]
+}

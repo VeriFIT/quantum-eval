@@ -1,0 +1,253 @@
+{
+    "version": "1.0",
+    "tree_id": "tree_id",
+    "vars": {
+        "q[0]": 0,
+        "q[1]": 1
+    },
+    "x_levels": 2,
+    "defs": {},
+    "ops": [
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[1]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 0.7853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "lockstep_to",
+                "target": {
+                    "var": "q[1]"
+                },
+                "action": {
+                    "type": "swap",
+                    "paramL": {
+                        "$ref": "high_swap"
+                    },
+                    "paramR": {
+                        "$ref": "high_swap"
+                    }
+                },
+                "pref_L": "LR",
+                "action_on_L": "R",
+                "pref_R": "LR",
+                "action_on_R": "R"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": -0.7853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "lockstep_to",
+                "target": {
+                    "var": "q[1]"
+                },
+                "action": {
+                    "type": "swap",
+                    "paramL": {
+                        "$ref": "high_swap"
+                    },
+                    "paramR": {
+                        "$ref": "high_swap"
+                    }
+                },
+                "pref_L": "LR",
+                "action_on_L": "R",
+                "pref_R": "LR",
+                "action_on_R": "R"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rz",
+                "angle": 0.7853981633974483
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "rx",
+                "angle": 1.5707963267948966
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "makenode",
+                "low": {
+                    "type": "get_side",
+                    "side": "L"
+                },
+                "high": {
+                    "type": "i_mul",
+                    "child": {
+                        "type": "get_side",
+                        "side": "R"
+                    }
+                },
+                "x_gate_name": "s"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[1]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action": {
+                "type": "lockstep_to",
+                "target": {
+                    "var": "q[1]"
+                },
+                "action": {
+                    "type": "swap",
+                    "paramL": {
+                        "$ref": "high_swap"
+                    },
+                    "paramR": {
+                        "$ref": "high_swap"
+                    }
+                },
+                "pref_L": "LR",
+                "action_on_L": "R",
+                "pref_R": "LR",
+                "action_on_R": "R"
+            }
+        },
+        {
+            "type": "traverse_to",
+            "target": {
+                "var": "q[0]"
+            },
+            "action_on": "R",
+            "action": {
+                "type": "traverse_to",
+                "target": {
+                    "var": "q[1]"
+                },
+                "action": {
+                    "type": "swap"
+                }
+            }
+        }
+    ]
+}

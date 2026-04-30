@@ -28,7 +28,11 @@ fi
 
 QUASM_QUOKKA_FILE="$QASM_DIR/../quokka-edited/${QASM_BASE}"
 if [[ -f "$QUASM_QUOKKA_FILE" ]]; then
-    echo "# Using QUOKKA variant: $QUASM_QUOKKA_FILE" >&2
+    QASM_FILE="$QUASM_QUOKKA_FILE"
+fi
+
+QUASM_QUOKKA_FILE="$QASM_DIR/../no-mcx/${QASM_BASE}"
+if [[ -f "$QUASM_QUOKKA_FILE" ]]; then
     QASM_FILE="$QUASM_QUOKKA_FILE"
 fi
 
