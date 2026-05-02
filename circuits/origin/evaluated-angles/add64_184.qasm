@@ -2,7 +2,6 @@ OPENQASM 3.0;
 include "qelib1.inc";
 
 qubit q[193];
-int c[193];
 
 h q[1];
 h q[2];
