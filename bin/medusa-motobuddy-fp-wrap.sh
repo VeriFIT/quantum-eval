@@ -55,10 +55,9 @@ if [[ "$QASM_BASE" == NL_* ]]; then
 fi
 
 # Evaluated-angles variant: if present, use it instead
-CIRCUITS_ROOT=$(realpath "$SCRIPT_DIR/../circuits/no-measure")
 QASM_FILE_ABS=$(realpath "$QASM_FILE")
-QASM_REL="${QASM_FILE_ABS#"$CIRCUITS_ROOT/"}"
-EVALUATED_ANGLES_FILE="$CIRCUITS_ROOT/evaluated-angles/$QASM_REL"
+QASM_DIR=$(dirname "$QASM_FILE_ABS")
+EVALUATED_ANGLES_FILE="$QASM_DIR/evaluated-angles/$QASM_BASE"
 if [[ -f "$EVALUATED_ANGLES_FILE" ]]; then
     QASM_FILE="$EVALUATED_ANGLES_FILE"
 fi
