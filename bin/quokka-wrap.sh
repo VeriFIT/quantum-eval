@@ -44,7 +44,7 @@ if [[ -f "$QUASM_QUOKKA_FILE" ]]; then
     QASM_FILE="$QUASM_QUOKKA_FILE"
 fi
 
-# Quokka-edited variant: preserve subdirectory structure
+# No-MCX variant: preserve subdirectory structure
 # ../circuits/no-measure/no-mcx/ModifiedRevLib/ab.qasm
 NOMCX_EDITED_DIR="$CIRCUITS_ROOT/no-mcx"
 QUASM_NOMCX_FILE="$NOMCX_EDITED_DIR/$QASM_REL"
