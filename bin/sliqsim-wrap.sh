@@ -23,11 +23,24 @@ if [ -f "$QASM_NL_FILE" ]; then
     QASM_FILE="$QASM_NL_FILE"
 fi
 
-SLIQSIM_EXE="${SCRIPT_DIR}/SliQSim" # TODO Change executable
+# No-MCX variant: look in no-mcx subdirectory relative to the original file
+NOMCX_FILE="$QASM_DIR/no-mcx/$QASM_BASE"
+if [ -f "$NOMCX_FILE" ]; then
+    QASM_FILE="$NOMCX_FILE"
+fi
+
+SLIQSIM_EXE="${SCRIPT_DIR}/SliQSim"
 
 SLIQSIM_OUT=$("$SLIQSIM_EXE" --print_info --type 1 --sim_qasm "$QASM_FILE" 2>&1)
 
 EXIT_CODE=$?
+
+# treat warnings as errors
+if echo "$SLIQSIM_OUT" | grep -qi "warning"; then
+    echo "###runtime:NA"
+    echo "###memory:NA"
+    exit 1
+fi
 
 RUNTIME=$(echo "$SLIQSIM_OUT" | grep -oP 'Runtime:\s*\K[0-9.]+' || echo "NA")
 
