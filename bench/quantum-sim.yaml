@@ -34,6 +34,68 @@ medusa-motobuddy-f80-loop:
 medusa-motobuddy-f128-loop:
   cmd: ../bin/medusa-motobuddy-fp-wrap.sh -s -p f128 $1
 
+# PR #24: inlined hot qBDD wrappers (LTO=0)
+medusa-motobuddy-inline-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline $1
+
+medusa-motobuddy-inline-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -s $1
+
+medusa-motobuddy-inline-f32-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -p f32 $1
+
+medusa-motobuddy-inline-f64-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -p f64 $1
+
+medusa-motobuddy-inline-f80-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -p f80 $1
+
+medusa-motobuddy-inline-f128-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -p f128 $1
+
+medusa-motobuddy-inline-f32-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -s -p f32 $1
+
+medusa-motobuddy-inline-f64-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -s -p f64 $1
+
+medusa-motobuddy-inline-f80-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -s -p f80 $1
+
+medusa-motobuddy-inline-f128-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline -s -p f128 $1
+
+# PR #24: inlined hot qBDD wrappers + LTO=1
+medusa-motobuddy-inline-lto-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto $1
+
+medusa-motobuddy-inline-lto-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -s $1
+
+medusa-motobuddy-inline-lto-f32-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -p f32 $1
+
+medusa-motobuddy-inline-lto-f64-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -p f64 $1
+
+medusa-motobuddy-inline-lto-f80-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -p f80 $1
+
+medusa-motobuddy-inline-lto-f128-base:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -p f128 $1
+
+medusa-motobuddy-inline-lto-f32-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -s -p f32 $1
+
+medusa-motobuddy-inline-lto-f64-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -s -p f64 $1
+
+medusa-motobuddy-inline-lto-f80-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -s -p f80 $1
+
+medusa-motobuddy-inline-lto-f128-loop:
+  cmd: ../bin/medusa-motobuddy-opt-wrap.sh -v inline-lto -s -p f128 $1
+
 medusa-stabilizer-base:
   cmd: ../bin/medusa-stabilizer-wrap.sh $1
 
